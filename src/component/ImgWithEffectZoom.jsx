@@ -6,7 +6,7 @@ const ImageWithEffectZoom = ({ src, alt, width, height, color, gColor, border })
 
   useEffect(() => {
     const handleResize = () => {
-      setIsZoomEnabled(window.innerWidth > 768);
+      setIsZoomEnabled(window.innerWidth >= 1024);
     };
 
     // Add event listener for window resize

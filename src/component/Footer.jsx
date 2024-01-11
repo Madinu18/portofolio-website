@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className={`${styles.container} p-4`}>
             <div className={styles.logo}>portofolio</div>
-            <div className={styles.text}>
+            <div className={`${styles.text} text-center`}>
                 This Website made by Muhammad Adi Nurhidayat using nextJS.
             </div>
         </div>

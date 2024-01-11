@@ -1,97 +1,64 @@
 "use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
-// import { motion, useInView } from "framer-motion";
 
 const projectsData = [
-    {
-        id: 1,
-        title: "React Portfolio Website",
-        description: "Project 1 description",
-        image: "/projects/1.jpg",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 2,
-        title: "Potography Portfolio Website",
-        description: "Project 2 description",
-        image: "/projects/2.jpg",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 3,
-        title: "E-commerce Application",
-        description: "Project 3 description",
-        image: "/projects/3.jpg",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 4,
-        title: "Food Ordering Application",
-        description: "Project 4 description",
-        image: "/projects/4.jpg",
-        tag: ["All", "Mobile"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 5,
-        title: "React Firebase Template",
-        description: "Authentication and CRUD operations",
-        image: "/projects/5.jpg",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
-    {
-        id: 6,
-        title: "Full-stack Roadmap",
-        description: "Project 5 description",
-        image: "/projects/6.jpg",
-        tag: ["All", "Web"],
-        gitUrl: "/",
-        previewUrl: "/",
-    },
+  {
+    id: 1,
+    title: "Portfolio Website",
+    description:
+      "A website to showcase my personal information and all the projects I have been working on. Built using Next.js and Tailwind.",
+    image: "/projects/portofolio-website.jpg",
+    gitUrl: "https://github.com/Madinu18/portofolio-website",
+  },
+  {
+    id: 2,
+    title: "Backend API for Carcinamon Community Apps",
+    description:
+      "Carcinamon Community is an app that connects cancer patients to each other with a feature for toxicity post-detection using ML sentiment analysis. This project is being used as my capstone project in the Bangkit 2023 program.",
+    image: "/projects/backend-carcinamon-apps.jpg",
+    gitUrl: "https://github.com/Madinu18/Backend-Carcinamon-Comunity-apps",
+  },
+  {
+    id: 3,
+    title: "Prototype IoT Smart Lock Door Using RFID",
+    description:
+      "This is a prototype of an IoT smart lock door system. It uses the ESP32 microcontroller and Codular for building the app. Firebase real-time database is utilized to store the data.",
+    image: "/projects/prototype-iot-smartlockdoor-rfid.jpg",
+    gitUrl: "https://github.com/Madinu18/IoT-Smart-Door-Lock-Prototype-project",
+  },
+  {
+    id: 4,
+    title: "Plant Watering Robot",
+    description:
+      "This is a line-following robot that has a function for spraying plants. Built using Arduino UNO, infrared sensor, and color sensor.",
+    image: "/projects/plant-watering-robot.jpg",
+    gitUrl: "https://github.com/Madinu18/Line-Following-Robot-for-Plant-Watering",
+  },
 ];
 
 const ProjectsSection = () => {
-    const [tag, setTag] = useState("All");
-    const ref = useRef(null);
-
-    const handleTagChange = (newTag) => {
-        setTag(newTag);
-    };
-
-    const filteredProjects = projectsData.filter((project) =>
-        project.tag.includes(tag)
-    );
+  const ref = useRef(null);
 
   return (
-    <section id="projects">
-        <h2 className="text-center text-2xl sm:text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-            My Projects
-        </h2>
-        <div ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-            {filteredProjects.map((project, index) => (
-                <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                imgUrl={project.image}
-                gitUrl={project.gitUrl}
-                previewUrl={project.previewUrl}
-                />
-            ))}
-        </div>
-        </section>
-    );
+    <section className="scroll-mt-24" id="projects">
+      <h2 className="text-center text-2xl sm:text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+        My Projects
+      </h2>
+      <div ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {projectsData.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            imgUrl={project.image}
+            gitUrl={project.gitUrl}
+            previewUrl={project.previewUrl}
+          />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default ProjectsSection;

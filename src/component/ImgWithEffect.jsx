@@ -26,7 +26,7 @@ const ImageWithEffect = ({ src, alt, width, height, color, gColor, border, href 
                         alt={alt}
                         width={width}
                         height={height}
-                        className="grayscale contrast-50 hover:filter-none transition duration-300"
+                        className="w-[60px] lg:w-[70px] grayscale contrast-50 hover:filter-none transition duration-300"
                         style={{
                         position: 'relative',
                         zIndex: '1',

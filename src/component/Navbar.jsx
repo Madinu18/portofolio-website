@@ -5,11 +5,12 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import MenuOverlay from "./MenuOverlay";
 import styles from "./glowButton.module.css"
+import Modal from "./Modal";
 
 const navLinks=[
     {
         title: "Home",
-        path: "/",
+        path: "#home",
     },
     {
         title: "Skills",
@@ -23,6 +24,10 @@ const navLinks=[
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const openModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-10 bg-[#191A19] bg-opacity-100 ">
@@ -53,18 +58,20 @@ const Navbar = () => {
                         ))
                     }
                 </ul>
-                <button className={`${styles.btn}`}>Contact Me</button>
+                <button onClick={openModal} className={`${styles.btn}`}>Contact Me</button>
             </div>
         </div>
         {navbarOpen ? 
         <>
         <div className="flex flex-col my-5 items-center">
             <MenuOverlay links={navLinks} />
-            <button className={`${styles.btnMobile} p-4 m-2 rounded-xl font-bold w-[80%]`}>Contact Me</button>
+            <button onClick={openModal} className={`${styles.btnMobile} p-4 m-2 rounded-xl font-bold w-[80%]`}>Contact Me</button>
         </div>
         </> : null
         }
-
+        {modalOpen && (
+        <Modal closeModal={closeModal} />
+        )}
         </nav>
     );
 };
