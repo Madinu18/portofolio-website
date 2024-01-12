@@ -32,14 +32,21 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            I am a{" "}
-            <span className="font-bold">fresh graduate</span> in electrical engineering, with a passion for
-            learning new things and a strong understanding of coding skills.
-            Additionally, I am familiar with using{" "}<span className="font-bold">Git</span>. I am more of a{" "}<span className="font-bold">team player</span> but can also work effectively <span className="font-bold">independently</span>. You can learn
-            more about me through my{" "}<span className="font-bold">LinkedIn profile</span>, or you can follow my
-            coding journey on{" "}<span className="font-bold">my GitHub</span>. I am currently looking for a{" "}<span className="font-bold">job</span>, so if
-            you are interested in <span className="font-bold">recruiting me</span>, feel free to contact me through{" "}
-            <span className="font-bold">this website</span> or via <span className="font-bold">my LinkedIn</span>.
+            I am a <span className="font-bold">fresh graduate</span> in
+            electrical engineering, with a passion for learning new things and a
+            strong understanding of coding skills. Additionally, I am familiar
+            with using <span className="font-bold">Git</span>. I am more of a{" "}
+            <span className="font-bold">team player</span> but can also work
+            effectively <span className="font-bold">independently</span>. You
+            can learn more about me through my{" "}
+            <span className="font-bold">LinkedIn profile</span>, or you can
+            follow my coding journey on{" "}
+            <span className="font-bold">my GitHub</span>. I am currently looking
+            for a <span className="font-bold">job</span>, so if you are
+            interested in <span className="font-bold">recruiting me</span>, feel
+            free to contact me through{" "}
+            <span className="font-bold">this website</span> or via{" "}
+            <span className="font-bold">my LinkedIn</span>.
           </p>
           <div className="flex justify-center sm:justify-start mb-2 sm:mb-0">
             <ImageWithEffect

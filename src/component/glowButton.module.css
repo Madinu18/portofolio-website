@@ -24,13 +24,7 @@
 /* glow */
 .btn::before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #72c100,
-    #9ffd32,
-    #1bfd9c,
-    #e2ffdc
-  );
+  background: linear-gradient(45deg, #72c100, #9ffd32, #1bfd9c, #e2ffdc);
   position: absolute;
   top: -2px;
   left: -2px;
@@ -72,7 +66,7 @@
   font-weight: 700;
 }
 
-.btnMobile{
+.btnMobile {
   padding: 13px 28px;
   border: none;
   outline: none;
@@ -98,13 +92,7 @@
 
 .btnMobile::before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #72c100,
-    #9ffd32,
-    #1bfd9c,
-    #e2ffdc
-  );
+  background: linear-gradient(45deg, #72c100, #9ffd32, #1bfd9c, #e2ffdc);
   position: absolute;
   top: -2px;
   left: -2px;

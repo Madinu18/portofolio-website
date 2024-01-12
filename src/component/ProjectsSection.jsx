@@ -33,7 +33,8 @@ const projectsData = [
     description:
       "This is a line-following robot that has a function for spraying plants. Built using Arduino UNO, infrared sensor, and color sensor.",
     image: "/projects/plant-watering-robot.jpg",
-    gitUrl: "https://github.com/Madinu18/Line-Following-Robot-for-Plant-Watering",
+    gitUrl:
+      "https://github.com/Madinu18/Line-Following-Robot-for-Plant-Watering",
   },
 ];
 
