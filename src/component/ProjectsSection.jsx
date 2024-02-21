@@ -5,6 +5,14 @@ import ProjectCard from "./ProjectCard";
 const projectsData = [
   {
     id: 1,
+    title: "Real-Time Chat Website",
+    description:
+      "A real-time chat website that allows users to communicate directly with one person or in groups. Utilizing Firebase's real-time database as the backend, this project is built using the next-generation JavaScript framework to provide an interactive and responsive chat experience.",
+    image: "/projects/real-time-chat.jpg",
+    gitUrl: "https://github.com/Madinu18/real-time-chat-web",
+  },
+  {
+    id: 2,
     title: "Portfolio Website",
     description:
       "A website to showcase my personal information and all the projects I have been working on. Built using Next.js and Tailwind.",
@@ -12,7 +20,7 @@ const projectsData = [
     gitUrl: "https://github.com/Madinu18/portofolio-website",
   },
   {
-    id: 2,
+    id: 3,
     title: "Backend API for Carcinamon Community Apps",
     description:
       "Carcinamon Community is an app that connects cancer patients to each other with a feature for toxicity post-detection using ML sentiment analysis. This project is being used as my capstone project in the Bangkit 2023 program.",
@@ -20,7 +28,7 @@ const projectsData = [
     gitUrl: "https://github.com/Madinu18/Backend-Carcinamon-Comunity-apps",
   },
   {
-    id: 3,
+    id: 4,
     title: "Prototype IoT Smart Lock Door Using RFID",
     description:
       "This is a prototype of an IoT smart lock door system. It uses the ESP32 microcontroller and Codular for building the app. Firebase real-time database is utilized to store the data.",
@@ -28,7 +36,7 @@ const projectsData = [
     gitUrl: "https://github.com/Madinu18/IoT-Smart-Door-Lock-Prototype-project",
   },
   {
-    id: 4,
+    id: 5,
     title: "Plant Watering Robot",
     description:
       "This is a line-following robot that has a function for spraying plants. Built using Arduino UNO, infrared sensor, and color sensor.",

@@ -1,4 +1,4 @@
-import { XMarkIcon } from "@heroicons/react/24/solid";
+import { XMarkIcon, EnvelopeIcon, UserIcon } from "@heroicons/react/24/solid"; // Import ikon yang diperlukan
 import { useState } from "react";
 
 const Modal = ({ closeModal }) => {
@@ -44,7 +44,7 @@ const Modal = ({ closeModal }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full px-10 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out">
+    <div className="fixed top-0 left-0 w-full h-full px-10 flex flex-col items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out">
       <div className="bg-[#191A19] p-8 rounded-lg relative mx-auto w-96 transform transition-transform duration-300 ease-in-out">
         <button
           onClick={closeModal}
@@ -71,41 +71,37 @@ const Modal = ({ closeModal }) => {
             </h2>
             <form onSubmit={handleSubmit}>
               {/* Form input untuk nama, email, pesan */}
-              <label className="font-semibold text-white" htmlFor="name">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full mb-2 p-2 border text-black"
-                placeholder="Enter your name"
-              />
+              <div className="mb-2 relative">
+                <UserIcon className="h-6 w-6 absolute top-1/2 transform -translate-y-1/2 left-2 text-gray-400" />
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full pl-10 pr-2 py-2 border text-black rounded-2xl"
+                  placeholder="Name"
+                />
+              </div>
 
-              <label className="font-semibold text-white" htmlFor="email">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full mb-2 p-2 border text-black"
-                placeholder="Enter a valid email Address"
-              />
+              <div className="mb-2 relative">
+                <EnvelopeIcon className="h-6 w-6 absolute top-1/2 transform -translate-y-1/2 left-2 text-gray-400" />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="w-full pl-10 pr-2 py-2 border text-black rounded-2xl"
+                  placeholder="Email"
+                />
+              </div>
 
-              <label className="font-semibold text-white" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-                className="w-full mb-4 p-2 border text-black"
-                placeholder="Enter your message"
-              />
+              <div className="mb-4 relative">
+                <textarea
+                  name="message"
+                  rows="4"
+                  required
+                  className="w-full pl-5 pr-2 py-2 border text-black rounded-2xl"
+                  placeholder="Message"
+                />
+              </div>
 
               <button
                 type="submit"
